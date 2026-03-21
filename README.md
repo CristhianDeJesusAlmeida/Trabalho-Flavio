@@ -2,3 +2,5 @@
 Trabalho React analise e desenvolvimento de sistemas para a aula do Flavio
 
 Trabalho v01 - Foi feito o commit do inicio do trabalho adicionando o repositorio e o react para começar com a demanda pedida(É chato escrever de jeito profissional)
+
+Trabalaho v02 - Foi feito o commit da variavel que guarda os dados que seraõ passados dos cards para os promps

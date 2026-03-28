@@ -1,5 +1,7 @@
 import { Card } from "../Componentes/Card";
 import { entidades } from "./data";
+import { items } from "./data";
+
 
 function App() {
   return (

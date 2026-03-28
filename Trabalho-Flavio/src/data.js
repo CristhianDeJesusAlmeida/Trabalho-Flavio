@@ -10,3 +10,17 @@ export const entidades = [
   { image: "../imagens/Aranha.webp", nome: "Aranha", tipo: "Monstro", descricao: "Fica agressiva à noite" },
   { image: "../imagens/Enderman.webp", nome: "Enderman", tipo: "Monstro", descricao: "Ataca se olhar nos olhos" }
 ];
+
+export const items =[
+	{image:"../imagens/espadas.webp",nome:"Espada",tipo:"Arma",descricao:"Usada para combate corpo a corpo contra mobs e outros jogadores."},
+	{image:"../imagens/picareta.jpg",nome:"Picareta",tipo:"Ferramenta",descricao:"Utilizada para minerar pedras, minérios e outros blocos duros."},
+	{image:"../imagens/machados.jpg",nome:"Machado",tipo:"Ferramenta",descricao:"Ideal para cortar madeira mais rapidamente e também útil em combate."},
+	{image:"../imagens/pas.png",nome:"Pa",tipo:"Ferramenta",descricao:"Usada para coletar terra, areia, cascalho e neve com eficiência."},
+	{image:"../imagens/emxadas.png",nome:"Enxada",tipo:"Ferramenta",descricao:"Serve para arar a terra e plantar sementes em áreas agrícolas."},
+	{image:"../imagens/etiqueta.webp",nome:"Etiqueta",tipo:"Utilidade",descricao:"Permite nomear mobs ou itens, evitando que desapareçam."},
+	{image:"../imagens/pocao.avif",nome:"Poção",tipo:"Consumível",descricao:"Fornece efeitos temporários como cura, força ou velocidade."},
+	{image:"../imagens/capacetes.webp",nome:"Capacete",tipo:"Armadura",descricao:"Protege a cabeça do jogador contra dano."},
+	{image:"../imagens/peitoral.webp",nome:"Peitoral",tipo:"Armadura",descricao:"Parte da armadura que oferece maior proteção ao corpo."},
+	{image:"../imagens/calças.webp",nome:"Calça",tipo:"Armadura",descricao:"Protege as pernas do jogador contra ataques."},
+	{image:"../imagens/botas.png",nome:"Botas",tipo:"Armadura",descricao:"Protege os pés e pode conceder efeitos especiais com encantamentos."},
+]

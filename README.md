@@ -6,3 +6,5 @@ Trabalho v01 - Foi feito o commit do inicio do trabalho adicionando o repositori
 Trabalaho v02 - Foi feito o commit da variavel que guarda os dados que seraõ passados dos cards para os promps
 
 Trabalho v03 - foi feito a organização geral do codigo para que podesse assim ser feito do jeito que o professor pediu com props sendo utilizada no App.jsx, Card recebendo a chamada das props com o App importando do data.js
+
+Trabalho v04 - Adicionando itens para lista de componente

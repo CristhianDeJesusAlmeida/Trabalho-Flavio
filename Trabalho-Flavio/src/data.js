@@ -11,9 +11,9 @@ export const entidades = [
   { image: "../imagens/Enderman.webp", nome: "Enderman", tipo: "Monstro", descricao: "Ataca se olhar nos olhos" }
 ];
 
-export const items =[
+export const ItensMine =[
 	{image:"../imagens/espadas.webp",nome:"Espada",tipo:"Arma",descricao:"Usada para combate corpo a corpo contra mobs e outros jogadores."},
-	{image:"../imagens/picareta.jpg",nome:"Picareta",tipo:"Ferramenta",descricao:"Utilizada para minerar pedras, minérios e outros blocos duros."},
+	{image:"../imagens/picareta.jpg",nome:"Picareta",tipo:"Ferramenta",descricao:"Utilizada para mcdcinerar pedras, minérios e outros blocos duros."},
 	{image:"../imagens/machados.jpg",nome:"Machado",tipo:"Ferramenta",descricao:"Ideal para cortar madeira mais rapidamente e também útil em combate."},
 	{image:"../imagens/pas.png",nome:"Pa",tipo:"Ferramenta",descricao:"Usada para coletar terra, areia, cascalho e neve com eficiência."},
 	{image:"../imagens/emxadas.png",nome:"Enxada",tipo:"Ferramenta",descricao:"Serve para arar a terra e plantar sementes em áreas agrícolas."},

@@ -1,6 +1,7 @@
 import { Card } from "../Componentes/Card";
+import { Itens } from "../Componentes/Itens";
 import { entidades } from "./data";
-import { items } from "./data";
+import { ItensMine } from "./data";
 
 
 function App() {
@@ -14,6 +15,16 @@ function App() {
           tipo={entidade.tipo}
           descricao={entidade.descricao}
           image={entidade.image}
+        />
+      ))}
+      <h1>Itens Minecraft</h1>
+      {ItensMine.map((item) => (
+        <Itens
+          key={item.nome}
+          nome={item.nome}
+          tipo={item.tipo}
+          descricao={item.descricao}
+          image={item.image}
         />
       ))}
     </div>

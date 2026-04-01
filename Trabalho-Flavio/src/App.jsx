@@ -1,8 +1,11 @@
 import { Card } from "../Componentes/Card";
 import { entidades } from "./data";
-
+import { useState } from "react";
 
 function App() {
+  const [filtro, setFiltro] = useState("Todos");
+  const categorias = ["Todos", "Jogador", "Animal", "NPC", "Monstro", "Item"];
+
   return (
     <div>
       <h1>Entidades Minecraft</h1>

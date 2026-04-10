@@ -5,7 +5,6 @@ import "./App.css";
 
 function App() {
   const [filtro, setFiltro] = useState("Todos");
-  const categorias = ["Todos", "Jogador", "Animal", "NPC", "Monstro", "Item"];
 
   let entidadesFiltrada;
 
@@ -13,8 +12,7 @@ function App() {
     entidadesFiltrada = entidades;
   } else {
     entidadesFiltrada = entidades.filter(
-      entidade => entidade.type === filtro
-    );
+      entidade => entidade.type === filtro);
   }
 
   return (
@@ -32,6 +30,7 @@ function App() {
           <option value="NPC">NPC</option>
           <option value="Animal">Animal</option>
           <option value="Monstro">Monstro</option>
+          <option value="tst">tst</option>
           <option value="Item">Item</option>
         </select>
       </div>

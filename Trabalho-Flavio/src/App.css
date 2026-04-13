@@ -1,0 +1,88 @@
+/* Estilo Global */
+body {
+  background-color: #313131; /* Fundo escuro estilo pedra */
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  padding: 20px;
+}
+
+h1 {
+  color: #55FF55; /* Verde clássico do Minecraft */
+  text-align: center;
+  text-shadow: 3px 3px #000;
+  margin-bottom: 40px;
+}
+
+/* Container de Filtros */
+.filtros {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Inputs e Selects estilo Botão do Minecraft */
+.search-input, select {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #c6c6c6;
+  border: 4px solid;
+  border-color: #ffffff #555555 #555555 #ffffff; /* Efeito 3D de botão */
+  padding: 10px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #555555 #ffffff #ffffff #555555; /* Inverte ao clicar */
+}
+
+/* Grid de Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* O Card estilo Inventário */
+.card {
+  background-color: #8B8B8B;
+  border: 5px solid #373737;
+  padding: 15px;
+  image-rendering: pixelated; /* Mantém as imagens de itens nítidas */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  background-color: #313131;
+  border: 4px solid #555;
+  padding: 5px;
+}
+
+.card h2 {
+  font-size: 14px;
+  color: #FFFF55; /* Cor de item selecionado */
+  margin: 10px 0;
+}
+
+.card p {
+  line-height: 1.6;
+  font-size: 10px;
+}
+
+/* Cores por Tipo */
+.tag-tipo {
+  background-color: #555;
+  padding: 5px;
+  font-size: 8px;
+  margin-bottom: 10px;
+}
+
+strong {
+  color: #FFAA00; /* Laranja para destacar labels */
+}

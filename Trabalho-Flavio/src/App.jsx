@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Card } from "../Components/Card";
-import { Filtrador } from "../Components/filtro";
+import { BuscaFiltro } from "../Components/filtro";
 import { entidades } from "./data";
 import "./App.css";
 
 function App() {
+
+  const [busca, setBusca] = useState("")
   const [filtro, setFiltro] = useState("Todos");
 
   let entidadesFiltrada;
@@ -16,12 +18,19 @@ function App() {
       (entidade) => entidade.type === filtro
     );
   }
+  entidadesFiltrada = entidadesFiltrada.filter((entidade) =>
+    entidade.name.includes(busca)
+  );
 
   return (
     <div className="container">
       <h1>Quadro das principais coisas de Minecraft</h1>
 
-      <Filtrador setFiltro={setFiltro} />
+      <BuscaFiltro 
+      busca={busca}
+      setBusca={setBusca} 
+      setFiltro={setFiltro} 
+      />
 
       <div className="cards">
         {entidadesFiltrada.map((entidade) => (

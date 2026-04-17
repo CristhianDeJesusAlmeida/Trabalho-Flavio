@@ -23,7 +23,7 @@ h1 {
 }
 
 /* Inputs e Selects estilo Botão do Minecraft */
-.search-input, select {
+.search-input, button {
   font-family: 'Press Start 2P', cursive;
   background-color: #c6c6c6;
   border: 4px solid;
@@ -86,3 +86,32 @@ h1 {
 strong {
   color: #FFAA00; /* Laranja para destacar labels */
 }
+
+/* Estilo base do botão (já com o efeito 3D que você tem) */
+button {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #c6c6c6;
+  border: 4px solid;
+  border-color: #ffffff #555555 #555555 #ffffff; /* Bordas claras em cima/esquerda, escuras embaixo/direita */
+  padding: 10px 20px;
+  outline: none;
+  cursor: pointer; /* <--- Isso coloca a "mãozinha" */
+  transition: all 0.1s; /* Deixa a transição mais suave */
+}
+
+/* Efeito de Hover (Passar o mouse) */
+button:hover {
+  background-color: #7b7b7b; /* Cor de seleção do Minecraft (cinza mais escuro) */
+  color: #ffff55; /* Texto amarelo igual ao item selecionado no jogo */
+  border-color: #ffffff #555555 #555555 #ffffff; /* Mantém a borda 3D */
+}
+
+/* Efeito de Active (Quando clica no botão) */
+button:active {
+  /* Inverte as cores da borda para dar o efeito de que o botão "entrou" na tela */
+  border-color: #555555 #ffffff #ffffff #555555;
+  padding-top: 12px;    /* Empurra o texto levemente para baixo */
+  padding-bottom: 8px;  /* Compensando o empurrão para manter o tamanho */
+  background-color: #555555;
+}
+

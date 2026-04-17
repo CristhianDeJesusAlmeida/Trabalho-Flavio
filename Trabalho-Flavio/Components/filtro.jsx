@@ -1,18 +1,19 @@
-import { useState } from "react";
-
-export function Filtrador({ setFiltro }) {
+export function BuscaFiltro({ busca, setBusca, setFiltro }) {
   return (
     <div className="filtros">
-      <select
-        onChange={(e) => setFiltro(e.target.value)}
-      >
-        <option value="Todos">Todos</option>
-        <option value="Jogador">Jogador</option>
-        <option value="NPC">NPC</option>
-        <option value="Animal">Animal</option>
-        <option value="Monstro">Monstro</option>
-        <option value="Item">Item</option>
-      </select>
+       <button onClick={() => setFiltro("Todos")}>Todos</button>
+       <button onClick={() => setFiltro("Animal")}>Animal</button>
+        <button onClick={() => setFiltro("Monstro")}>Monstro</button>
+        <button onClick={() => setFiltro("Item")}>Item</button>
+
+      <input
+        className="search-input"
+        type="text"
+        placeholder="Buscar por nome..."
+        value={busca}
+        onChange={(e) => setBusca(e.target.value)}
+/>
+
     </div>
   );
 }

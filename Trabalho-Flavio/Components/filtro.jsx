@@ -2,6 +2,7 @@ export function BuscaFiltro({ busca, setBusca, setFiltro }) {
   return (
     <div className="filtros">
        <button onClick={() => setFiltro("Todos")}>Todos</button>
+       <button onClick={() => setFiltro("Jogador")}>Jogador</button>
        <button onClick={() => setFiltro("Animal")}>Animal</button>
         <button onClick={() => setFiltro("Monstro")}>Monstro</button>
         <button onClick={() => setFiltro("Item")}>Item</button>

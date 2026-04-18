@@ -1,117 +1,129 @@
 /* Estilo Global */
 body {
-  background-color: #313131; /* Fundo escuro estilo pedra */
+  background-image: url('https://transparenttextures.com'), linear-gradient(#313131, #1a1a1a);
+  background-color: #313131;
   color: #fff;
   font-family: 'Press Start 2P', cursive;
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 1.5;
   padding: 20px;
+  image-rendering: pixelated;
 }
 
+
 h1 {
-  color: #55FF55; /* Verde clássico do Minecraft */
+  color: #55FF55;
   text-align: center;
-  text-shadow: 3px 3px #000;
+  text-shadow: 4px 4px #000;
   margin-bottom: 40px;
+  letter-spacing: 2px;
 }
 
 /* Container de Filtros */
 .filtros {
   display: flex;
-  gap: 15px;
+  flex-wrap: wrap; /* Ajuste para telas menores */
+  gap: 10px;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border: 4px solid #000;
 }
 
-/* Inputs e Selects estilo Botão do Minecraft */
+/* Inputs e Botões Estilo Minecraft UI */
 .search-input, button {
   font-family: 'Press Start 2P', cursive;
-  background-color: #c6c6c6;
-  border: 4px solid;
-  border-color: #ffffff #555555 #555555 #ffffff; /* Efeito 3D de botão */
-  padding: 10px;
-  outline: none;
-}
-
-.search-input:focus {
-  border-color: #555555 #ffffff #ffffff #555555; /* Inverte ao clicar */
-}
-
-/* Grid de Cards */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-/* O Card estilo Inventário */
-.card {
+  color: #E0E0E0;
   background-color: #8B8B8B;
-  border: 5px solid #373737;
-  padding: 15px;
-  image-rendering: pixelated; /* Mantém as imagens de itens nítidas */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  border: 4px solid;
+  /* Bordas do Minecraft: Topo/Esquerda claras, Base/Direita escuras */
+  border-color: #DBDBDB #373737 #373737 #DBDBDB; 
+  padding: 12px;
+  outline: none;
+  text-shadow: 2px 2px #373737;
+  cursor: pointer;
+}
+
+/* Input de busca específico */
+.search-input {
+  background-color: #000;
+  border-color: #373737 #DBDBDB #DBDBDB #373737; /* Invertido para parecer um buraco/campo */
+  color: #55FF55;
+  padding-left: 15px;
+}
+
+/* Efeito de Hover e Active */
+button:hover {
+  background-color: #5555FF; /* Azul de seleção clássico */
+  color: #FFFF55;
+  border-color: #8B8B8B #0000AA #0000AA #8B8B8B;
+}
+
+button:active {
+  background-color: #38E100; /* Verde ao confirmar clique */
+  border-color: #004400 #8B8B8B #8B8B8B #004400;
+  transform: translateY(2px);
+}
+
+button {
+  font-size: 14px; 
+  padding: 15px 25px; 
+}
+
+.search-input {
+  font-size: 14px;
+}
+
+/* O Card estilo Inventário/Slot */
+.card {
+  background-color: #C6C6C6;
+  border: 4px solid;
+  border-color: #FFF #555 #555 #FFF; /* Relevo de slot de item */
+  padding: 20px;
+  box-shadow: 4px 4px 0px #000;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  background-color: #D6D6D6;
 }
 
 .card img {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 15px;
-  background-color: #313131;
-  border: 4px solid #555;
-  padding: 5px;
+  width: 96px; /* Múltiplo de 16 para pixel art */
+  height: 96px;
+  background-color: #8B8B8B;
+  border: 4px solid #373737;
+  image-rendering: pixelated;
+  box-shadow: inset 4px 4px 10px #000;
 }
 
 .card h2 {
-  font-size: 14px;
-  color: #FFFF55; /* Cor de item selecionado */
-  margin: 10px 0;
+  font-size: 18px; /* Nome do item maior */
+  color: #313131;
+  text-shadow: none;
+  margin: 15px 0;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px;
 }
 
 .card p {
-  line-height: 1.6;
-  font-size: 10px;
+  font-size: 12px; 
+  color: #222;
+  text-align: left; 
+  line-height: 1.4;
+  text-shadow: none;
 }
 
-/* Cores por Tipo */
-.tag-tipo {
-  background-color: #555;
-  padding: 5px;
-  font-size: 8px;
-  margin-bottom: 10px;
+/* Scrollbar Estilo Jogo */
+::-webkit-scrollbar {
+  width: 12px;
 }
-
-strong {
-  color: #FFAA00; /* Laranja para destacar labels */
+::-webkit-scrollbar-track {
+  background: #313131;
 }
-
-/* Estilo base do botão (já com o efeito 3D que você tem) */
-button {
-  font-family: 'Press Start 2P', cursive;
-  background-color: #c6c6c6;
-  border: 4px solid;
-  border-color: #ffffff #555555 #555555 #ffffff; /* Bordas claras em cima/esquerda, escuras embaixo/direita */
-  padding: 10px 20px;
-  outline: none;
-  cursor: pointer; /* <--- Isso coloca a "mãozinha" */
-  transition: all 0.1s; /* Deixa a transição mais suave */
+::-webkit-scrollbar-thumb {
+  background: #8B8B8B;
+  border: 3px solid #373737;
 }
-
-/* Efeito de Hover (Passar o mouse) */
-button:hover {
-  background-color: #7b7b7b; /* Cor de seleção do Minecraft (cinza mais escuro) */
-  color: #ffff55; /* Texto amarelo igual ao item selecionado no jogo */
-  border-color: #ffffff #555555 #555555 #ffffff; /* Mantém a borda 3D */
-}
-
-/* Efeito de Active (Quando clica no botão) */
-button:active {
-  /* Inverte as cores da borda para dar o efeito de que o botão "entrou" na tela */
-  border-color: #555555 #ffffff #ffffff #555555;
-  padding-top: 12px;    /* Empurra o texto levemente para baixo */
-  padding-bottom: 8px;  /* Compensando o empurrão para manter o tamanho */
-  background-color: #555555;
-}
-

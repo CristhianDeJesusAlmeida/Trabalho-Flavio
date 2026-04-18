@@ -10,3 +10,9 @@ Trabalho v03 - foi feito a organização geral do codigo para que podesse assim 
 Trabalho v04 - Adicionando itens para lista de componente
 
 Trabalho v05: Após corrigir uma série de erros de integração e conflitos de arquivos, finalmente posso dormir que o rework final dos dados e a estrutura do App estão prontos e organizados para a implementação do filtro por categoria
+
+Trabalho v06: Adicionei novos itens ao objeto principal e implementado filtro por categoria para  exibição dos cards
+
+Trabalho v07: Adicionado css,deletando componentes errados, fonte no index e arrumando o card com adição de ternarios
+
+Trabalho v08: Criado o componente main,arrumando o tamanho do app, colocando tailwind nos botões e fazendo multi select

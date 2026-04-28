@@ -1,4 +1,13 @@
-export const Card = ({ nome, tipo, descricao, image, rarity, behavior }) => {
+import { useState } from "react";
+
+export const Card = ({ nome, tipo, descricao, image, rarity, behavior,adicionar, remover}) => {
+  const [clicadoFavorito,setClicadoFavorito] = useState([])
+  const gerenciarFavorito = (valor) =>{
+    const favoritar = valor ? adicionar : remover
+    setClicadoFavorito(favoritar);
+  }
+
+  
   return (
     <div className="card">
       <img src={image} alt={nome} />
@@ -12,6 +21,7 @@ export const Card = ({ nome, tipo, descricao, image, rarity, behavior }) => {
 
       <h3>Tipo: {tipo}</h3>
       <p>{descricao}</p>
+      <button onClick={() => gerenciarFavorito}>Favoritar</button>
     </div>
   );
 };

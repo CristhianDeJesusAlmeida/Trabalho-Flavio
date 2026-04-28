@@ -7,6 +7,7 @@ import { entidades } from "/src/data";
 
   const [busca, setBusca] = useState("")
   const [filtro, setFiltro] = useState([]);
+  const [favorito,setFavorito] = useState([])
 
   const entidadesFiltrada = entidades.filter((entidade) => {
     const nomeEntidade = entidade.name.toLowerCase();
@@ -17,6 +18,21 @@ import { entidades } from "/src/data";
     return passouBusca && (semFiltro || tipoCorresponde)
   })
 
+  const adicionarFavorito = (event) =>{
+    event.preventDefault();
+    const listaFavoritaRenderizada = [...setFavorito]
+    listaFavoritaRenderizada.push(event.value)
+    setFavorito(listaFavoritaRenderizada)
+  }
+
+  const  removerFavorito = (index) =>{
+    const listaFavoritaRenderizada = [...favorito];
+    const listaFiltrada = listaFavoritaRenderizada.filter((favoritoVetor,indice) =>{
+        return index != indice;
+    })
+    setFavorito(listaFiltrada)
+}
+
   return (
     <div className="container">
       <h1>Quadro das principais coisas de Minecraft</h1>
@@ -25,6 +41,7 @@ import { entidades } from "/src/data";
       busca={busca}
       setBusca={setBusca} 
       setFiltro={setFiltro} 
+      favorito = {mudarFavorito}
       />
 
       <div className="cards">
@@ -38,6 +55,8 @@ import { entidades } from "/src/data";
                     behavior={entidade.behavior}
                     descricao={entidade.description}
                     image={entidade.image}
+                    adicionar = {adicionarFavorito}
+                    remover = {removerFavorito}
                 />))
         ) : (<p>Nenhum resultado encontrado para "{busca}"</p>)
         }

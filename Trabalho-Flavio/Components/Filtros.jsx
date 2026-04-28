@@ -1,5 +1,5 @@
 import { useState } from "react";
-export function BuscaFiltro({ busca, setBusca, setFiltro }) {
+export function BuscaFiltro({ busca, setBusca, setFiltro,favorito}) {
   const [clicado,setClicado] = useState([])
   const gerenciarClique = (valor) => {
     const novaLista = valor === "Todos" ? [] : clicado.includes(valor) ? clicado.filter((item) => item !== valor) : [...clicado, valor];
@@ -19,6 +19,9 @@ export function BuscaFiltro({ busca, setBusca, setFiltro }) {
       color: "white",
       borderRadius: "5px"
     }
+
+  
+
   };
   return (
     <div className="filtros">
